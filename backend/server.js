@@ -32,7 +32,7 @@ app.use("/api", router);
 app.get("/api/env-check", (req, res) => {
   res.json({
     mongo: !!process.env.MONGO_URI,
-    openai: !!process.env.OPENAI_API_KEY,
+    openai: !!process.env.GEMINI_API_KEY,
   });
 });
 
