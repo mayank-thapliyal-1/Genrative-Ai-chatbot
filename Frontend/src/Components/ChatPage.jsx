@@ -66,23 +66,23 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex h-screen  w-screen text-white ">
+    <div className=" sm:flex block h-screen  w-screen text-white ">
       <RxHamburgerMenu className="
-      sm:hidden block fixed top-4 left-4 bg-transparent backdrop-blur-md shadow-sm shadow-yellow-50 text-gray-200 rounded-full p-1 h-10 w-10" onClick={()=>setActive((prev)=>!prev)} />
+      sm:hidden block fixed top-5 left-5 bg-transparent backdrop-blur-md shadow-sm shadow-yellow-50 text-gray-200 rounded-full p-1 h-8 w-8" onClick={()=>setActive((prev)=>!prev)} />
       <Sidebar
         sessions={sessions}
         onSelect={selectSession}
         onNewChat={newChat}
         Active={active}
       />
-      <div className="sm:flex-1  mx-auto h-screen flex flex-col items-center  sm:w-full py-2 w-screen overflow-hidden">
+      <div className="sm:flex-1  mx-auto h-screen flex flex-col items-center  sm:w-full py-2 w-screen overflow-hidden ">
         {/* Header */}
-        <div className="p-4   text-xl font-semibold  shadow border-b border-gray-400 w-full">
+        <div className="p-4  text-center text-xl font-semibold  shadow border-b border-gray-400 w-full">
           AI Chat
         </div>
 
         {/* Chat Window */}
-        <div className="flex-1 overflow-y-auto sm:w-10/12 w-screen px-3 space-y-4 ">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden sm:w-10/12 w-full  px-3 p-2 space-y-4 ">
           {messages.map((m, i) => (
             <div
               key={i}
