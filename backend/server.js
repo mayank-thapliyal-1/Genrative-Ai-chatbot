@@ -5,7 +5,9 @@ import express from "express";
 import router from "./routes/chat.route.js"
 const app = express();
 const Port =8000;
-app.use(cors());
+app.use(cors(
+ { origin:"https://genrative-ai-chatbot-tas2.vercel.app/",}
+));
 app.use(express.json());
 dotenv.config();
 mongoose

@@ -5,6 +5,5 @@ export const getSessionId = () => {
     id = crypto.randomUUID();
     localStorage.setItem("chat_session", id);
   }
-
   return id;
 };
