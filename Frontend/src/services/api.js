@@ -4,5 +4,5 @@ const API = axios.create({
 });
 export const sendMessageAPI = (message, sessionId) =>
   API.post("/chat", { message, sessionId });
-export const getHistoryAPI = (sessionId) => API.get(`history/${sessionId}`);
+export const getHistoryAPI = (sessionId) => API.get(`/history/${sessionId}`);
 export const getSessionsAPI = () => API.get(`/sessions`);
