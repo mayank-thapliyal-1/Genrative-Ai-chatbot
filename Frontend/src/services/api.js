@@ -5,6 +5,6 @@ const API = axios.create({
 });
 
 export const sendMessageAPI = (message, sessionId) =>
-  API.post(`${import.meta.env.VITE_API_KEY}/api/chat`, { message, sessionId });
-export const getHistoryAPI = (sessionId) => API.get(`${import.meta.env.VITE_API_KEY}/api/history/${sessionId}`);
-export const getSessionsAPI = () => API.get(`${import.meta.env.VITE_API_KEY}/api/sessions`);
+  API.post(`${import.meta.env.VITE_API_URL}/api/chat`, { message, sessionId });
+export const getHistoryAPI = (sessionId) => API.get(`${import.meta.env.VITE_API_URL}/api/history/${sessionId}`);
+export const getSessionsAPI = () => API.get(`${import.meta.env.VITE_API_URL}/api/sessions`);
